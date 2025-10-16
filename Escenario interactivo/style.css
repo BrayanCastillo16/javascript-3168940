@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  background: #87CEFA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.escenario {
+  position: relative;
+  width: 750px;
+  height: 500px;
+  background: url("Fondo\ bob.jpg") no-repeat center/cover;
+  overflow: hidden;
+  border: 4px solid #000;
+  border-radius: 10px;
+}
+
+/* General de assets */
+.asset {
+  position: absolute;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.5s ease;
+}
+
+/* ---- Animables ---- */
+.animable-1 {
+  width: 100px;
+  left: 100px;
+  bottom: 50px;
+  animation: flotar 3s ease-in-out infinite;
+}
+
+.animable-2 {
+  width: 120px;
+  right: 150px;
+  bottom: 80px;
+  animation: girar 4s linear infinite;
+}
+
+/* ---- Clickeables ---- */
+.clickeable-1 { width: 80px; left: 50px; top: 100px; }
+.clickeable-2 { width: 90px; left: 300px; top: 200px; }
+.clickeable-3 { width: 100px; right: 100px; bottom: 150px; }
+.clickeable-4 { width: 80px; right: 250px; top: 80px; }
+
+/* ---- Animaciones ---- */
+@keyframes flotar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes girar {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ---- Contador ---- */
+.contador {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: #FFD600;
+  color: #000;
+  font-family: "Comic Sans MS", cursive;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
