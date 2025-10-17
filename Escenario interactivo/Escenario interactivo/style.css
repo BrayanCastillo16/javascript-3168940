@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  background: #89CFF0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.escenario {
+  position: relative;
+  width: 750px;
+  height: 500px;
+  background: url("Fondo\ bob.jpg") no-repeat center/cover;
+  border: 4px solid #000;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.titulo-escenario {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  padding: 5px 15px;
+  font-family: "Comic Sans MS", cursive;
+  font-size: 20px;
+  color: #000;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  z-index: 10;
+}
+
+/* General */
+.asset {
+  position: absolute;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.5s ease;
+}
+
+/* Animables */
+.animable-1 {
+  width: 110px;
+  left: 80px;
+  bottom: 50px;
+  animation: flotar 3s ease-in-out infinite;
+}
+
+.animable-2 {
+  width: 90px;
+  left: 350px;
+  top: 180px;
+  animation: girar 4s linear infinite;
+}
+
+/* Clickeables */
+.clickeable-1 { width: 70px; left: 100px; top: 80px; }
+.clickeable-2 { width: 80px; left: 280px; bottom: 100px; }
+.clickeable-3 { width: 80px; right: 130px; bottom: 110px; }
+.clickeable-4 { width: 120px; right: 40px; bottom: 60px; } /* Patricio */
+
+/* Animaciones */
+@keyframes flotar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes girar {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Contadores */
+.contador, .contador2 {
+  position: absolute;
+  background: #FFD600;
+  color: #000;
+  font-family: "Comic Sans MS", cursive;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Principal arriba derecha */
+.contador {
+  right: 20px;
+  top: 20px;
+}
+
+/* Segundo contador (para Patricio) más abajo */
+.contador2 {
+  right: 20px;
+  top: 70px;
+  background: #FFEB3B;
+}
+
+/* Cuadro info */
+.info-cuadro {
+  position: absolute;
+  right: -220px;
+  top: 100px;
+  width: 200px;
+  background: #fff;
+  border: 3px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  font-family: "Comic Sans MS", cursive;
+  text-align: center;
+  padding: 10px;
+  opacity: 0;
+  transition: right 0.5s ease, opacity 0.5s ease;
+}
+
+.info-cuadro.mostrar {
+  right: 10px;
+  opacity: 1;
+}
