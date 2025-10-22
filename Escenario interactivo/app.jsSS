@@ -1,0 +1,18 @@
+const jeffrey = document.getElementById('.jellyfish');
+const tablero = document.getElementById('contador');
+let counter = 0;
+
+console.log(jell,tablero)
+
+jell.forEach(item => {
+    console.log("hola")
+    
+});
+
+
+
+   
+
+
+
+

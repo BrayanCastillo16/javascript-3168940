@@ -3,24 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Escenario Interactivo</title>
+  <title>Escenario Interactivo Bob Esponja</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="escenario">
-    <!-- Elementos animables -->
-    <img src="bob.png" alt="Animable 1" class="asset animable animable-1">
-    <img src="patri.png" alt="Animable 2" class="asset animable animable-2">
 
-    <!-- Elementos clickeables -->
-    <img src="bob.png" alt="Clickeable 1" class="asset clickeable clickeable-1">
-    <img src="burbu.png" alt="Clickeable 2" class="asset clickeable clickeable-2">
-    <img src="clickeable3.png" alt="Clickeable 3" class="asset clickeable clickeable-3">
-    <img src="clickeable4.png" alt="Clickeable 4" class="asset clickeable clickeable-4">
+      <div class="titulo-escenario">¡Bienvenido al Mundo de Bob Esponja<br>CUENTA A PTRICIO! 🧽✨</div>
+      <br>
+      
+  
 
-    <!-- Contador o marcador -->
+    <!-- Animaciones -->
+    <img src="bob.png" alt="Bob" class="asset animable animable-1">
+    <img src="burbu.png" alt="Gary" class="asset animable animable-2" id="animable2">
+
+    <!-- Clickeables -->
+    <img src="Gary.png" alt="Medusa" class="asset clickeable clickeable-1">
+    <img src="Calamardo.png" alt="Cangreburger" class="asset clickeable clickeable-2">
+    <img src="Hamburguesa.png" alt="Calamardo" class="saltar">
+    <img src="patri.png" alt="Patricio" class="asset clickeable clickeable-4" id="patricio">
+
+    <!-- Contadores -->
     <div class="contador" id="contador">0</div>
+    <div class="contador2" id="contador2">0</div>
+
+    <!-- Cuadro de información -->
+    <div class="info-cuadro" id="info-cuadro">
+      <p>Animación 2 seleccionada 🌀</p>
+    </div>
   </div>
+
+
+ <!-- ESCENARIO 2 (Free Fire) -->
+    <section class="escenario escenario-2" id="escenario2" aria-label="Escenario Free Fire">
+      <div class="titulo titulo-2">ESCENARIO FREEFIRE</div>
+
+      <!-- Assets escenario 2 (usar nombres de archivos que subiste) -->
+      <!-- Personaje agachado (animable - izquierda arriba) -->
+      <div class="asset animable2" id="arma2"><img src="miguel.png" alt="Personaje con arma"></div>
+
+      <!-- Calavera (centro) -->
+      <div class="asset static" id="skull2"><img src="kill.png" alt="Calavera"></div>
+
+      <!-- Troll encima de calavera (animable - rebotando) -->
+      <div class="asset animable2" id="troll2"><img src="troll.png" alt="Trollface"></div>
+
+      <!-- Persona T-pose a la derecha -->
+      <div class="asset static" id="person2"><img src="yo.png" alt="Persona"></div>
+
+      <!-- Botiquín abajo izquierda -->
+      <div class="asset clickeable2" id="botiquin2"><img src="botiquin.png" alt="Botiquín"></div>
+
+      <!-- Diamantes abajo centro (clickeable) + texto DAR CLICK -->
+      <div class="asset clickeable2" id="diamantes2"><img src="diamantes.png" alt="Diamantes"></div>
+      <div class="darclick" id="darclick2">DAR CLICK</div>
+
+      <!-- Contador del escenario 2 (a la derecha) -->
+      <div class="contador contador-esc2" id="contador2">0</div>
+
+      <!-- panel lateral pequeño que aparece al hacer click en animable2 (si quieres reusar) -->
+      <div class="info-cuadro" id="info2"><p>Animación 2 seleccionada 🌀</p></div>
+    </section>
+
+  </main>
 
   <script src="app.js"></script>
 </body>
