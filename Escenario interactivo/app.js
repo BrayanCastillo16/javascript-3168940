@@ -95,3 +95,129 @@ animable2.addEventListener("click", () => {
   });
 
 })();
+
+// Escenario 3: interactividad y puntajes distintos (Huesos = modo INFINITO rápido)
+(function(){
+  // elementos
+  const calabaza = document.getElementById('calabaza3');
+  const mandy = document.getElementById('mandy3');
+  const gatopa = document.getElementById('gatopa3');
+  const huesos = document.getElementById('huesos3');
+  const bily = document.getElementById('bily3');
+  const bruja = document.getElementById('bruja3');
+
+  const contadorEl = document.getElementById('contador3');
+  const infoEl = document.getElementById('info3');
+
+  // puntos por elemento (usar data-points si quieres)
+  const puntos = {
+    calabaza: 1,
+    mandy: 2,
+    gatopa: 3,
+    bily: 5,
+    bruja: 8
+    // huesos será modo especial
+  };
+
+  // contador total del escenario 3
+  let total = 0;
+  let huesosInterval = null; // intervalo que hará la suma masiva
+  let huesosActivo = false;
+
+  // helper actualizar visual del contador (formato)
+  function actualizarContador(){
+    // mostrar número con separador de miles
+    contadorEl.textContent = total.toLocaleString('es-ES');
+  }
+
+  // función para sumar puntos normales
+  function sumar(n){
+    total += n;
+    actualizarContador();
+    // pulso visual
+    contadorEl.animate([{ transform:'scale(1)' },{ transform:'scale(1.08)' },{ transform:'scale(1)' }], { duration:220 });
+  }
+
+  // listeners para clickeables normales
+  calabaza.addEventListener('click', ()=> {
+    sumar(puntos.calabaza);
+    // pequeño movimiento
+    calabaza.style.transform = 'translateY(-6px) scale(1.03)';
+    setTimeout(()=> calabaza.style.transform = '', 220);
+  });
+
+  mandy.addEventListener('click', ()=> {
+    sumar(puntos.mandy);
+    mandy.style.transform = 'translateY(-6px) scale(1.03)';
+    setTimeout(()=> mandy.style.transform = '', 220);
+  });
+
+  gatopa.addEventListener('click', ()=> {
+    sumar(puntos.gatopa);
+    gatopa.style.transform = 'translateY(-6px) scale(1.03)';
+    setTimeout(()=> gatopa.style.transform = '', 220);
+  });
+
+  bily.addEventListener('click', ()=> {
+    sumar(puntos.bily);
+    bily.style.transform = 'translateY(-6px) scale(1.03)';
+    setTimeout(()=> bily.style.transform = '', 220);
+  });
+
+  bruja.addEventListener('click', ()=> {
+    sumar(puntos.bruja);
+    bruja.style.transform = 'translateY(-6px) scale(1.03)';
+    setTimeout(()=> bruja.style.transform = '', 220);
+  });
+
+  // HUESOS: modo C (suma infinita / rápida)
+  // comportamiento: al primer click se activa un setInterval que suma rápidamente; al siguiente click se desactiva.
+  huesos.addEventListener('click', ()=>{
+    if(!huesosActivo){
+      // activar modo infinito: interval que suma mucho muy rápido
+      huesosActivo = true;
+      infoEl.textContent = 'HUESOS: MODO INFINITO ACTIVADO ⚡';
+      huesos.classList.add('animar-bounce'); // efecto visual extra
+      // intervalo agresivo: +1000 cada 60ms (ajusta si quieres más/menos)
+      huesosInterval = setInterval(()=>{
+        total += 1000;
+        // cada 10 ticks actualizamos (para ahorrar repaints), aquí actualizamos siempre porque la intención es ver incremento rápido
+        actualizarContador();
+      }, 60);
+    } else {
+      // desactivar
+      huesosActivo = false;
+      infoEl.textContent = 'Huesos: modo INFINITO (clic para activar)';
+      huesos.classList.remove('animar-bounce');
+      clearInterval(huesosInterval);
+      huesosInterval = null;
+    }
+    // feedback de pulsación
+    huesos.style.transform = 'translateY(-6px) scale(1.02)';
+    setTimeout(()=> huesos.style.transform = '', 160);
+  });
+
+  // Añadir animaciones iniciales a los animables:
+  // - gatopa: animar-volar (volando)
+  // - bruja: animar-volar (volando)
+  // - (podemos hacer que huesos tenga un ligero pulso inicial)
+  gatopa.classList.add('animar-volar');
+  bruja.classList.add('animar-volar');
+  // huesos inicialmente con pulsito leve
+  huesos.classList.add('animar-bounce');
+
+  // accesibilidad: permitir Enter/Space para clics
+  [calabaza, mandy, gatopa, huesos, bily, bruja].forEach(el=>{
+    el.setAttribute('tabindex','0');
+    el.addEventListener('keydown', (e)=>{
+      if(e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        el.click();
+      }
+    });
+  });
+
+  // inicializar contador en 0
+  actualizarContador();
+
+})();
