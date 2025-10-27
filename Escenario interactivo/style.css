@@ -4,7 +4,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 500vh;
 }
 
 .escenario {
@@ -448,4 +448,22 @@ left: 20px;
 /* responsive pequeño */
 @media (max-width:820px){
   .escenario{ transform:scale(.86); transform-origin:top center; }
+  
+}
+
+.reset-button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff5722;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+  z-index: 100;
 }
