@@ -1,6 +1,6 @@
 const clickeables = document.querySelectorAll(".clickeable");
 const contador = document.getElementById("contador");
-const contador2 = document.getElementById("contador2");
+const contador2 = document.getElementById("contador2"); 
 const animable2 = document.getElementById("animable2");
 const patricio = document.getElementById("patricio");
 const infoCuadro = document.getElementById("info-cuadro");
