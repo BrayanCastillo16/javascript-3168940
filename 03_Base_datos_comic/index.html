@@ -1,12 +1,134 @@
-<html lang="en">
+<!doctype html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>El lenguaje del corazón.</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <script src="app.js"></script>
-    <cript src="bd.js"></script>
-    
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">El lenguaje del corazón.</a>
+      <nav class="main-nav">
+        <a href="#">Women</a>
+        <a href="#">Men</a>
+        <a href="#">Kids</a>
+        <a href="#">Sale</a>
+      </nav>
+      <div class="header-actions">
+        <button id="searchBtn" aria-label="Search">🔍</button>
+        <a class="cart" href="#">Cart (0)</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero / Carousel -->
+    <section class="hero">
+      <div class="hero-slides" id="heroSlides">
+        <div class="slide" data-index="0">
+          <div class="slide-content">
+            <h1>Capítulo 1 - El descubrimiento</h1>
+            <p>Oferta por tiempo limitado</p>
+            <a class="btn" href="#">Shop Sale</a>
+          </div>
+          <img alt="promo" src="image 40.png" />
+        </div>
+        <div class="slide" data-index="1">
+          <div class="slide-content">
+            <h1>New Arrivals</h1>
+            <p>Lo último en colección</p>
+            <a class="btn" href="#">Ver novedades</a>
+          </div>
+          <img alt="promo" src="capi 2.png" />
+        </div>
+      </div>
+      <div class="hero-controls">
+        <button id="prevHero">‹</button>
+        <button id="nextHero">›</button>
+      </div>
+    </section>
+
+     <section class="hero">
+      <div class="hero-slides" id="heroSlides">
+        <div class="slide" data-index="0">
+          <div class="slide-content">
+            <h1>Capítulo 2 - Las Líricas</h1>
+            <p>Oferta por tiempo limitado</p>
+            <a class="btn" href="#">Shop Sale</a>
+          </div>
+          <img alt="promo" src="capi 2.png" />
+        </div>
+        <div class="slide" data-index="1">
+          <div class="slide-content">
+            <h1>New Arrivals</h1>
+            <p>Lo último en colección</p>
+            <a class="btn" href="#">Ver novedades</a>
+          </div>
+          <img alt="promo" src="https://via.placeholder.com/1200x420?text=Banner+2" />
+        </div>
+      </div>
+      <div class="hero-controls">
+        <button id="prevHero">‹</button>
+        <button id="nextHero">›</button>
+      </div>
+    </section>
+
+     <section class="hero">
+      <div class="hero-slides" id="heroSlides">
+        <div class="slide" data-index="0">
+          <div class="slide-content">
+            <h1>Capítulo 3 - La solución </h1>
+            <p>Oferta por tiempo limitado</p>
+            <a class="btn" href="#">Shop Sale</a>
+          </div>
+          <img alt="promo" src="capi3.png" />
+        </div>
+        <div class="slide" data-index="1">
+          <div class="slide-content">
+            <h1>New Arrivals</h1>
+            <p>Lo último en colección</p>
+            <a class="btn" href="#">Ver novedades</a>
+          </div>
+          <img alt="promo" src="capi3.png" />
+        </div>
+      </div>
+      <div class="hero-controls">
+        <button id="prevHero">‹</button>
+        <button id="nextHero">›</button>
+      </div>
+    </section>
+
+    <!-- Productos -->
+    <section class="products container">
+      <h2>Productos destacados</h2>
+      <div class="product-grid" id="productGrid">
+        <!-- tarjetas generadas por JS -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="col">
+        <h4>About</h4>
+        <a href="#">Our Story</a>
+        <a href="#">Sustainability</a>
+      </div>
+      <div class="col">
+        <h4>Support</h4>
+        <a href="#">Help Center</a>
+        <a href="#">Shipping</a>
+      </div>
+      <div class="col">
+        <h4>Legal</h4>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
