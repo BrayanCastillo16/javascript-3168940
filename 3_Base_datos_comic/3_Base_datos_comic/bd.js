@@ -2,7 +2,9 @@ let comic =
 {
   "nombrecomic": "El lenguaje del corazón",
   "numerocapitulos": "3",
-  "genero": 2016,
+  "genero": "Fantasía"
+  
+  ,
   "sipnosis": "",
   "autores": ["Juanes", "Padre", "Mensajero"],
   "portadaComic": "img/portada.jpg",
@@ -36,4 +38,5 @@ let comic =
       
      },
 
-    ]
+  ]
+}
