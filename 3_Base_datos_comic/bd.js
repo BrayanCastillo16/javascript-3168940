@@ -15,19 +15,19 @@ let comic =
     {
       "nombre":"Juanes",
       "descripcion":"lorem...",
-      "imagen":"juanes.jpg"
+      "imagen":"Juanes.png"
     },
 
     {
       "nombre":"Padre",
       "descripcion":"lorem...",
-      "imagen":"capitulo1.jpg"
+      "imagen":"juanes cabezon.jpeg"
     },
 
     {
       "nombre":"Mensajero",
       "descripcion":"lorem...",
-      "imagen":"fantasma.jpg"
+      "imagen":"Fantasma.png"
     },
 
   ],
@@ -40,7 +40,7 @@ let comic =
       "nombre": "new arrivals",
         "name": "Capítulo 1 - El descubrimiento",
         "Personajes": 29,
-        "portadaCapitulo": "capitulo1.jpg",
+        "portadaCapitulo": "capitulo1.png",
         "descripcion": "En una pequeña choza a la orilla de un río en un pueblo alejado de la civilización, vivía una familia numerosa, de la cual Juanes era el menor de cinco hermanos, el consentido de los abuelos."
       
     },

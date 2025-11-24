@@ -1,54 +1,47 @@
-      const personajes = document.querySelector(".personajes");
+      const Numeropersonajes = document.querySelector(".personajes");
 
+      Numeropersonajes.innerHTML = "";
 
       comic.personajes.forEach( char => {
-        const section = document.createElement("personajes");
+        const section = document.createElement("section");
         section.classList.add("section");
         section.innerHTML = `
        <h2>${char.nombre}</h2>
   <div class="cards">
     <div class="card">
       <img src="${char.imagen}" alt="Juanes">
+      <p>${char.descripcion}</p>
       <h3>Juanes</h3>
     </div>
         `;
 
-        personajes.appendChild(div);
+        Numeropersonajes.appendChild(section);
       });
        
       
       
-      const padre = document.querySelector(".padre");
+      const Numerocap = document.querySelector(".hero-slides");
+
+      Numerocap.innerHTML = "";
 
 
-      comic.padre.forEach( capitulos => {
-        const section = document.createElement("padre");
-        section.classList.add("div");
+      comic.padre.forEach( cap => {
+        const section = document.createElement("section");
+        section.classList.add("section");
         section.innerHTML = `
-       <section class="hero">
-      <div class="hero-slides" id="heroSlides">
-        <div class="slide" data-index="0">
-          <div class="slide-content">
-            <h1>${capitulos.name}</h1>
-            <p>${capitulos.descripcion}</p>
+
+       <div class="slide-content">
+            <h1>capitulo${cap.id}</h1>
+            <p>${cap.nombre}</p>
+            <p>${cap.descripcion}</p>
+            img src="${cap.portadaCapitulo}" alt="Capítulo 1">
+
+
             <a class="btn" href="#">Ver Mas</a>
           </div>
-          <img alt="${capitulos.portadaCapitulo}" src="${capitulo.portadaCapitulo}" />
-        </div>
-        <div class="slide" data-index="1">
-          <div class="slide-content">
-            <h1>${capitulos.nombre}</h1>
-            <p>${capitulos.descripcion}</p>
-            <a class="btn" href="#">Ver novedades</a>
-      </div>
-      <div class="hero-controls">
-        <button id="prevHero">‹</button>
-        <button id="nextHero">›</button>
-      </div>
-    </section>
         `;
 
-        capitulos.appendChild(div);
+        Numerocap.appendChild(section);
       });
        
 
