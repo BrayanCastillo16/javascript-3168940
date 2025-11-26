@@ -1,3 +1,5 @@
+import { comic } from "./bd.js";
+
       const Numeropersonajes = document.querySelector(".personajes");
 
       Numeropersonajes.innerHTML = "";
@@ -20,25 +22,29 @@
        
       
       
-      const Numerocap = document.querySelector(".hero-slides");
+      const Numerocap = document.querySelector(".Hero");
 
       Numerocap.innerHTML = "";
 
 
-      comic.padre.forEach( cap => {
+      comic.capitulos.forEach( cap => {
         const section = document.createElement("section");
         section.classList.add("section");
         section.innerHTML = `
 
-       <div class="slide-content">
-            <h1>capitulo${cap.id}</h1>
-            <p>${cap.nombre}</p>
-            <p>${cap.descripcion}</p>
-            img src="${cap.portadaCapitulo}" alt="Capítulo 1">
+          <h1>Capítulo 1 - El descubrimiento</h1>
+         <div class="Hero-slides" id="heroSlides">
+         <.div class="slide" data-index="0">
+         <div class="slide-content">
+         <img src="capitulo1.png" alt="Capítulo 1 - El descubrimiento">
+         </div>
+         <div class="hero_controls">
+          <h3>Capítulo 1</h3>
+          <p>El descubrimiento</p>
+        </div>
 
 
-            <a class="btn" href="#">Ver Mas</a>
-          </div>
+            <a class="btn" href="capitulos.html">Ver Mas</a>
         `;
 
         Numerocap.appendChild(section);

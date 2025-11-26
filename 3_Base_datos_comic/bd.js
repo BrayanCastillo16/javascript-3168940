@@ -1,4 +1,4 @@
-let comic =
+export let comic =
 {
   "nombrecomic": "El lenguaje del corazón",
   "numerocapitulos": "3",
@@ -13,18 +13,21 @@ let comic =
    
   
     {
+      "id": 1,
       "nombre":"Juanes",
       "descripcion":"lorem...",
       "imagen":"Juanes.png"
     },
 
     {
+      "id": 2,
       "nombre":"Padre",
       "descripcion":"lorem...",
       "imagen":"juanes cabezon.jpeg"
     },
 
     {
+      "id": 3,
       "nombre":"Mensajero",
       "descripcion":"lorem...",
       "imagen":"Fantasma.png"
@@ -40,7 +43,7 @@ let comic =
       "nombre": "new arrivals",
         "name": "Capítulo 1 - El descubrimiento",
         "Personajes": 29,
-        "portadaCapitulo": "capitulo1.png",
+        "portadaCapitulo": "capitulo1.jpg",
         "descripcion": "En una pequeña choza a la orilla de un río en un pueblo alejado de la civilización, vivía una familia numerosa, de la cual Juanes era el menor de cinco hermanos, el consentido de los abuelos."
       
     },
