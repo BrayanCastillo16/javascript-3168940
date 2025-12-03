@@ -1,4 +1,41 @@
 
+/* carrusel */
+.carousel-container {
+    width: 600px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+}
+
+.carousel-slide {
+    display: none; /* Oculta todas las diapositivas por defecto */
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+}
+
+/* Muestra la primera diapositiva por defecto, o la que esté activa con JavaScript */
+.carousel-slide:first-child {
+    display: block; 
+}
+
+.prev-button, .next-button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+
+/*  */
 :root{
   --accent:#000;
   --muted:#666;
@@ -53,7 +90,7 @@ body{margin:0;background:var(--bg);
 /* Hero */
 .hero{position:
   relative;
-  overflow:hidden;
+  
   margin:16px 0}
 
 .hero-slides{display:flex;
