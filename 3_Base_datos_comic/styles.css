@@ -27,7 +27,8 @@
 }
 
 .prev-button, .next-button {
-    display: block;
+    background-color: #f6ff00;
+  display: block;
     margin: 10px auto;
     padding: 10px 20px;
     cursor: pointer;
@@ -128,20 +129,7 @@ body{margin:0;background:var(--bg);
    }
 
  /* Hero controls */
-.hero-controls{
-  position:absolute;
-  right:16px;top:50%;transform:translateY(-50%); 
-  display:flex;
-  gap:6px;
- }
 
-.hero-controls button{
-  background:#fff;
-  border:1px solid #ddd;
-  padding:8px 10px;
-  border-radius:6px;
-  cursor:pointer;
- }
 
  /* Products grid */
  .products{

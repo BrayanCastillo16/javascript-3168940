@@ -55,6 +55,7 @@ import { comic } from "./bd.js";
       const Numerocap = document.querySelector(".Hero");
 
       Numerocap.innerHTML = "";
+      
 
 
       comic.capitulos.forEach( cap => {
@@ -75,7 +76,34 @@ import { comic } from "./bd.js";
 
 
             <a class="btn" href="capitulos.html">Ver Mas</a>
-        `;
+            
+            /*  */
+
+            
+               <div class="Hero-slides">
+        <div class="slide" data-index="0">
+          <img src="capitulo2.png" alt="Capítulo 2 - Las Líricas">
+        </div>
+        <div class="slide-content">
+          <h3>Capítulo 2</h3>
+          <p>Las Líricas</p>
+        </div>
+      </div>
+
+      <div class="hero-slides">
+        <div class="slide-content" data-index="1">
+          <img src="capitulo3.png" alt="Capítulo 3 - La solución">
+        </div>
+        <div class="slide-content"> 
+          <h3>Capítulo 3</h3>
+          <p>La solución</p>
+        </div>
+      </div>
+    </div>
+    <a href="#comic" class="btn">Iniciar Cómic</a>
+  </div>
+        
+      `;
 
         Numerocap.appendChild(section);
       });
