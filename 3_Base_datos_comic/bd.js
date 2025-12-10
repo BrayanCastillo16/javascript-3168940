@@ -15,21 +15,21 @@ export let comic =
     {
       "id": 1,
       "nombre":"Juanes",
-      "descripcion":"lorem...",
+      "descripcion":"Juanes es un joven músico marcado por una guitarra maldita, que logra liberarse al tocar desde el amor verdadero.",
       "imagen":"Juanes.png"
     },
 
     {
       "id": 2,
       "nombre":"Padre",
-      "descripcion":"lorem...",
+      "descripcion":"El padre de Juanes es su primer maestro y guía, quien le enseña que la música se toca con el corazón. .",
       "imagen":"juanes cabezon.jpeg"
     },
 
     {
       "id": 3,
       "nombre":"Mensajero",
-      "descripcion":"lorem...",
+      "descripcion":"El Mensajero es una entidad espiritual que guía a Juanes y le revela que el amor verdadero es la única forma de romper la maldición de la guitarra",
       "imagen":"Fantasma.png"
     },
 
@@ -39,7 +39,7 @@ export let comic =
       
   "capitulos": [
     {
-      "id": "capitulo 1",
+      "id": 1,
       "nombre": "new arrivals",
         "name": "Capítulo 1 - El descubrimiento",
         "Personajes": 29,
@@ -49,7 +49,7 @@ export let comic =
     },
 
     {
-      "id": "capitulo 2",
+      "id": 2,
       "nombre": "new arrivals",
         "name": "Capítulo 2 - Las Líricas",
         "Personajes": 29,
@@ -59,7 +59,7 @@ export let comic =
     },
 
      {
-      "id":  "capitulo 3",
+      "id": 3, 
       "nombre": "new arrivals",
         "name": "Capítulo 3 - La solución ",
         "Personajes": 29,
