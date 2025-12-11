@@ -63,46 +63,19 @@ import { comic } from "./bd.js";
         section.classList.add("section");
         section.innerHTML = `
 
-          <h1></h1>
-         <div class="Hero-slides" id="heroSlides">
-         <.div class="slide" data-index="0">
-         <div class="slide-content">
-         <img src="capitulo1.png" alt="Capítulo 1 - El descubrimiento">
-         </div>
-         <div class="hero_controls">
-          <h3>Capítulo 1</h3>
-          <p>El descubrimiento</p>
-         </div>
-
-
-            <a class="btn" href="capitulos.html">Ver Mas</a>
-            
-            /*  */
-
-            
-               <div class="Hero-slides">
-        <div class="slide" data-index="0">
-          <img src="capitulo2.png" alt="Capítulo 2 - Las Líricas">
-        </div>
+              <div class="hero">
+    <h1>${cap.name}</h1>
+    <div class="Hero-slides" id="heroSlides">
+      <div class="slide">
         <div class="slide-content">
-          <h3>Capítulo 2</h3>
-          <p>Las Líricas</p>
+          <img src="${cap.portadaCapitulo}" alt="Capítulo 1">
+        </div>
+        <div class="hero_controls">––
+          <h3>Capítulo 1</h3>
+          <p>${cap.descripcion}</p>
         </div>
       </div>
 
-      <div class="hero-slides">
-        <div class="slide-content" data-index="1">
-          <img src="capitulo3.png" alt="Capítulo 3 - La solución">
-        </div>
-        <div class="slide-content"> 
-          <h3>Capítulo 3</h3>
-          <p>La solución</p>
-        </div>
-      </div>
-    </div>
-    <a href="#comic" class="btn">Iniciar Cómic</a>
-  </div>
-        
       `;
 
         Numerocap.appendChild(section);
