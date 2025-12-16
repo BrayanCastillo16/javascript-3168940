@@ -1,0 +1,272 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0a0a0a 0%, #fdff8b 100%);
+    color: white;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, #ffc852 100%);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ffc852;
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    background: linear-gradient(135deg, #ffc852, #d0e769);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    cursor: pointer;
+}
+
+.boton-volver {
+    background: #ffc852;
+    color: white;
+    border: 2px solid #99e5f8;
+    padding: 10px 25px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.boton-volver:hover {
+    background: #ffc852;
+    box-shadow: 0 0 20px rgba(136, 236, 231, 0.6);
+    transform: translateY(-2px);
+}
+
+/* Banner del personaje */
+.banner-personaje {
+    background: linear-gradient(135deg, #f8aa00 0%, #9ff4f7cc 100%),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%231a0033" width="1200" height="400"/><circle cx="20%" cy="50%" r="200" fill="%235b1369" opacity="0.1"/><circle cx="80%" cy="50%" r="300" fill="%23ff006e" opacity="0.05"/></svg>');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 50px;
+    border-bottom: 3px solid #ffffff;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-personaje::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, #ffc852 0%, rgba(91, 19, 105, 0.2) 100%);
+    pointer-events: none;
+}
+
+.imagen-personaje {
+    width: 320px;
+    height: 380px;
+    background: linear-gradient(135deg, #ffc852, #69cee7);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 120px;
+    box-shadow: 0 20px 60px rgba(142, 235, 241, 0.3);
+    position: relative;
+    z-index: 2;
+    flex-shrink: 0;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.info-banner {
+    flex: 1;
+    position: relative;
+    z-index: 2;
+}
+
+.nombre-personaje {
+    font-size: 65px;
+    font-weight: 900;
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #ffffff, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.rol-personaje {
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.descripcion-corta {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #000000;
+    max-width: 500px;
+}
+
+/* Contenedor de información */
+.contenedor-info {
+    padding: 60px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Secciones */
+.seccion {
+    margin-bottom: 70px;
+    animation: slideInUp 0.8s ease-out;
+}
+
+.seccion h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+}
+
+.seccion h2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #ffc852, transparent);
+    border-radius: 2px;
+}
+
+.texto-info {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #aaaaaa;
+    margin-top: 20px;
+}
+
+/* Características */
+.caracteristicas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.caracteristica {
+    background: linear-gradient(135deg, rgba(255, 253, 149, 0.3), rgba(26, 26, 26, 0.5));
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 15px;
+    border: 2px solid rgba(244, 255, 147, 0.2);
+    transition: all 0.3s ease;
+}
+
+.caracteristica:hover {
+    border-color: #ffc852;
+    background: rgba(237, 255, 137, 0.5);
+    box-shadow: 0 10px 30px rgba(247, 255, 134, 0.2);
+    transform: translateY(-5px);
+}
+
+.caracteristica-titulo {
+    color: #ffc852;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.caracteristica-valor {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Habilidades */
+.habilidades {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.habilidad {
+    background: linear-gradient(135deg, rgba(253, 255, 139, 0.2), rgba(247, 255, 141, 0.3));
+    backdrop-filter: blur(10px);
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    border: 2px solid #ffc852;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.habilidad:hover {
+    background: #ffc852;
+    color: black;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(248, 255, 154, 0.4);
+}
+
+/* Galería */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.imagen-galeria {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(135deg, #ffc852, #69cee7);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    border: 2px solid rgba(239, 255, 146, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(139, 255, 245, 0.3);
+}
+
+.imagen-galeria:hover {
+    border-color: #ffc852;
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(255, 248, 149, 0.4);
+}
+
+/* Animaciones */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
