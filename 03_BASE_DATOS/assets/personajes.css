@@ -94,6 +94,7 @@ body {
     flex: 1;
     position: relative;
     z-index: 2;
+    animation: slideInUp 1s ease-in-out;
 }
 
 .nombre-personaje {
