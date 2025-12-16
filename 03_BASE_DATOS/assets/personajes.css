@@ -4,6 +4,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #0a0a0a 0%, #fdff8b 100%);
     color: white;
+    animation: slideInUp 0.8s ease-out;
 }
 
 /* Header */
@@ -260,7 +261,7 @@ body {
     transform: translateY(-8px);
     box-shadow: 0 20px 40px rgba(255, 248, 149, 0.4);
 }
-
+ 
 /* Animaciones */
 @keyframes slideInUp {
     from {
