@@ -63,7 +63,7 @@ body {
     align-items: center;
     position: relative;
     overflow: hidden;
-    animation: scaleIn 1s ease-in-out;
+    animation: slideInUp 1s ease-in-out;
 }
 
 .banner-personaje::before {
