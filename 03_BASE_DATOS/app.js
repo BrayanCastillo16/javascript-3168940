@@ -71,25 +71,7 @@ comic.capitulos.forEach( char => {
 // ===== FIN SECCIÓN CAPÍTULOS  ===== //
 
 
-// ===== SECCIÓN MINI CAPÍTULOS  ===== //
 
-const miniContainer = document.querySelector(".mini-capitulos")
-
-miniContainer.innerHTML = "";
-
-comic.capitulos.forEach( char => {
-    const div = document.createElement ('div')
-    div.classList.add('mini-cap' );
-    div.innerHTML = `
-                    <a href="./assets/capitulos.html?id=${char.id}">
-                    <img src="${char.portada}" alt="${char.nombre}" class="mini-cap-img">
-                    <div style="margin-top: 5px;">${char.nombre}</div>
-                    </a>
-    `
-    miniContainer.appendChild(div);
-});
-
-// ===== FIN SECCIÓN MINI CAPÍTULOS  ===== //
 
 
 const tPrincipal = document.querySelector ('.principal');
